@@ -12,9 +12,10 @@ Easier_Contest is a Python script designed to streamline your Codeforces contest
 1. Clone this repository: `git clone https://github.com/Abdulrhman-shaheen/Easier_Contest.git`
 2. Navigate to the cloned repository: `cd Easier_Contest`
 3. Install the required Python packages: `pip install -r requirements.txt`
-4. Add the link of the Codeforces contest you want to participate in to the `link.txt` file.
-5. (Optional) Add your default code snippet to the `snippet.txt` file.
-6. Run the script: `python main.py`
+4. change the `DIR` variable to the directory where the folder will be created. 
+5. Add the link of the Codeforces contest you want to participate in to the `link.txt` file.
+6. (Optional) Add your default code snippet to the `snippet.txt` file.
+7. Run the script: `python main.py`
 
 Now, you're ready to start coding! Easier_Contest has set up the necessary directories and files for you.
 
