@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+#define print(arr) for(auto a : arr){ cout << a << '  ' ;}
+#define loop(i, a, n) for(int i = a; i < n; i++)
+#define vi vector<int>
+using namespace std;
+ 
+void solve(){
+ 
+}
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    int t; cin>>t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
