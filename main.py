@@ -22,7 +22,7 @@ class Extractor:
         links = problems_table.select("a")
         flag = True
         for link in links:
-            if any(char == 'x' for char in link.text) or link.text == "":
+            if(str(link['href']).find("problem")) < 0 or link.text == "":
                 continue
             if flag:
                 temp = ' '.join(link.text.split()) + "."
