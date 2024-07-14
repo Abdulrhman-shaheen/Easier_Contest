@@ -2,6 +2,7 @@
 #define print(arr) for(auto a : arr){ cout << a << '  ' ;}
 #define loop(i, a, n) for(int i = a; i < n; i++)
 #define vi vector<int>
+#define ll long long
 using namespace std;
  
 void solve(){
