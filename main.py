@@ -1,17 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
 import os
-
+import sys
 DIR = r"D:\projects\cpp"
 
 class Extractor:
-    def __init__(self):
+    def __init__(self,link = None):
         self.problems = []
         self.folder_name = "" 
         self.dir = DIR
         self.snippet = "snippet.txt"
-
-        with open('link.txt', 'r') as f:
+        if link != None:
+            self.link = link
+        else:    
+            with open('link.txt', 'r') as f:
                 self.link = f.read()
 
         self.soup = BeautifulSoup(requests.get(self.link).text, "html.parser")
@@ -50,8 +52,10 @@ class Extractor:
 
     
 def main():
-
-    Names_grabber = Extractor()
+    if(len(sys.argv) > 1 ):
+        Names_grabber = Extractor(sys.argv[1])    
+    else:
+        Names_grabber = Extractor()
 
     problems = Names_grabber.get_problems()
     folder_name = Names_grabber.get_contest_name()
