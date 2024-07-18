@@ -58,7 +58,11 @@ class Extractor:
 
     def login(self):
         session = requests.session()
-        self.soup = BeautifulSoup(session.get(self.link).text, "html.parser")
+        if self.link != None:
+            self.soup = BeautifulSoup(session.get(self.link).text, "html.parser")
+        else:
+            print("Please provide a link using -l")
+            exit()
 
         csrf = self.soup.find("input", {"name": "csrf_token"})["value"]
         ftaa = "".join([chr(random.randint(97, 122)) for _ in range(1, 18)])
@@ -105,8 +109,8 @@ class Extractor:
             os.mkdir(folder_path)
         except OSError as error:
             if input(
-                "The folder '{folder_path}' already exists. Do you want to continue anyway? (y/n):"
-            ).lower in ["yes", "y"]:
+                f"The folder '{folder_path}' already exists. Do you want to continue anyway? (y/n):"
+            ).lower() in ["yes", "y"]:
                 os.mkdir(folder_path + "(1)")
             else:
                 print("Terminating process...")
