@@ -111,7 +111,8 @@ class Extractor:
             if input(
                 f"The folder '{folder_path}' already exists. Do you want to continue anyway? (y/n):"
             ).lower() in ["yes", "y"]:
-                os.mkdir(folder_path + "(1)")
+                folder_path = folder_path + "(1)"
+                os.mkdir(folder_path)
             else:
                 print("Terminating process...")
                 exit()
