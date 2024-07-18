@@ -1,23 +1,31 @@
 # Easier_Contest
 
-Easier_Contest is a Python script designed to streamline your Codeforces contest experience. It automatically organizes your files by creating a directory named after the contest and generating `.cpp` files for each problem. This allows you to focus more on solving problems and less on setting up your environment.
+Easier_Contest is a Python script designed to streamline your Codeforces contest experience. It automatically organizes your files by creating a directory named after the contest and generating `.cpp` (by default) files for each problem.
 
 ## Features
 
-- Automatic directory and file creation: Just pass the link of the contest in the `link.txt` file, and Easier_Contest will create a directory and `.cpp` files for each problem.
-- Customizable code snippets: You can add your own default code snippet to all the created files by including it in the `snippet.txt` file. This is perfect for including your macros or shortcuts.
+- Automatic directory and file creation: Just pass the link of the contest after the `-l` flag and Easier_Contest will handle the rest.
+
+- Customizable code snippets: You can add your own default code snippet to all the created files by including it in the `snippet.txt` file.
 
 ## Getting Started
 
 1. Clone this repository: `git clone https://github.com/Abdulrhman-shaheen/Easier_Contest.git`
 2. Navigate to the cloned repository: `cd Easier_Contest`
 3. Install the required Python packages: `pip install -r requirements.txt`
-4. change the `DIR` variable to the directory where the folder will be created. 
-5. Add the link of the Codeforces contest you want to participate in to the `link.txt` file or pass it as first argument.
-6. (Optional) Add your default code snippet to the `snippet.txt` file.
-7. Run the script: `python main.py`
+4. change the `DIR` variable to the directory where the folder will be created.
+5. (Optional) Add your default code snippet to the `snippet.txt` file or delete existing content if not needed.
+6. For the first run do `python main.py -c 1` to configure your login credentials.
 
-Now, you're ready to start coding! Easier_Contest has set up the necessary directories and files for you.
+## Command-Line Arguments
+
+The tool supports several command-line arguments to customize its behavior. Below is a detailed explanation of each:
+
+- `--link` or `-l`: passes link for the contest.
+
+- `--config` or `-c`: Save or edit credentials.
+
+- `--extension` or `-ex`: extension for the files.
 
 ## Contributing
 
